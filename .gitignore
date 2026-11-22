@@ -1,0 +1,49 @@
+# ---------- Python ----------
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---------- Secrets (never commit API keys) ----------
+.env
+*.key
+secrets.*
+
+# ---------- Data ----------
+# Images and videos are large, may be licensed, and may contain real
+# infants (privacy). Never commit them. Only the files re-allowed below
+# are tracked; teammates recreate the data using the README.
+data/*
+!data/.gitkeep
+!data/sources.csv
+!data/LABELING_GUIDE.md
+
+# Raw media anywhere in the repo
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ---------- Models / training output ----------
+# Trained weights and run folders are reproducible, so they stay out of git.
+# To share one final model on purpose, force-add it:
+#   git add -f models/posture_v1/weights/best.pt
+models/*
+!models/.gitkeep
+runs/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+
+# ---------- Editors / OS ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
